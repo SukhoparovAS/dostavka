@@ -1,0 +1,282 @@
+@import "stylenull.scss";
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 20px;
+}
+.header {
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 33;
+	width: 100%;
+	height: 110px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #e62107;
+	padding: 0 50px;
+	&__tel{
+		a{
+			color: #FFF;
+			font-size: 25px;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.logo {
+}
+.categories-menu {
+	width: 50%;
+	max-width: 500px;
+	&__links {
+		display: flex;
+
+		justify-content: space-between;
+		li{
+			a{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				color: #FFF;
+				font-size: 20px;
+			}
+		}
+	}
+}
+.menu-ico {
+	height: 50px;
+	width: 50px;
+	margin-bottom: 10px;
+}
+.cart-btn {
+	position: relative;
+}
+.cart-ico {
+}
+.cart-number {
+	position: absolute;
+	left: 50px;
+	top: 0;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	background-color: red;
+	text-align: center;
+	line-height: 27px;
+}
+.slider {
+	position: relative;
+	&__item {}
+	&__img {
+		width: 100%;
+	}
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		z-index: 10;
+		font-size: 0;
+		width: 50px;
+		height: 90px;
+		background-color: rgba(255,255,255,0);
+	}
+	.slick-arrow.slick-next{
+		left: 50px;
+
+		&:before{
+			content: "";
+			display: block;
+			width: 5px;
+			height: 60px;
+			background-color: red;
+			transform: rotate(45deg);
+			position: absolute;
+			top: -5px;
+			left: 20px;
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 5px;
+			height: 60px;
+			background-color: red;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 35px;
+			left: 20px;
+		}
+	}
+	.slick-arrow.slick-prev{
+		right: 50px;
+				&:before{
+			content: "";
+			display: block;
+			width: 5px;
+			height: 60px;
+			background-color: red;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: -5px;
+			left: 20px;
+		}
+		&:after{
+			content: "";
+			display: block;
+			width: 5px;
+			height: 60px;
+			background-color: red;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 35px;
+			left: 20px;
+		}
+	}
+}
+.slick-slider{}
+.slick-list{
+	overflow: hidden;
+}
+.slick-track{
+	display: flex;
+	align-items:flex-start;
+}
+.page{
+	background: url("..//img/background.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	padding: 0 100px;
+	background-attachment: fixed
+}
+.top-sales{
+	width: 100%;
+	background-color: #181818;
+
+}
+.top-sales {
+}
+.grid {
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	&__item {
+		margin-top: 60px;
+	}
+}
+
+.product-ticket {
+	max-width: 335px;
+	border-right: 2px solid #fff;
+	height: 100%;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	&__img {
+		margin-bottom: 20px;
+		width: 295px;
+		height: 295px;
+	}
+	&_nme {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	&__weight-selection-grid {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex: 1 1 auto;
+	}
+	&__weight-selection-item {
+		width: 70px;
+		height: 30px;
+		border: 1px solid #fff;
+		text-align: center;
+		line-height: 30px;
+		margin: 0 10px;
+		margin-bottom: 20px;
+	}
+	&__composition-row {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	&__composition-item {
+		position: relative;
+		margin: 0 10px;
+		margin-bottom: 20px;
+		&:hover{
+			.product-ticket__description{
+				display: block;
+			}
+		}
+	}
+	&__composition-ico {
+		width: 35px;
+		height: 35px;
+	}
+	&__description {
+		display: none;
+		width: 90px;
+		height: 15px;
+		position: absolute;
+		left: 50%;
+		top: -15px;
+		transform: translate(-50%,0);
+		text-align: center;
+		font-size: 12px;
+		line-height: 15px;
+		background-color: red;
+		border-radius: 4px;
+	}
+	&__input-row{
+		display: flex;
+		margin-bottom: 20px;
+	}
+	&__input-quantity{
+		display: flex;
+		margin-right: 50px;
+	}
+	&__plus-btn{
+		width: 35px;
+		height: 35px;
+		border: 1px solid #fff;
+		text-align: center;
+		line-height: 31px;
+		margin-right: 2px;
+	}
+	&__quantity-edit{
+		height: 35px;
+		width: 40px;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 20px;
+		text-align: center;
+	}
+	&__minus-btn{
+		width: 35px;
+		height: 35px;
+		border: 1px solid #fff;
+		text-align: center;
+		line-height: 29px;
+		margin-left: 2px;
+	}
+	&__bay-btn{
+		background-color: red;
+		color: #fff;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 20px;
+		padding: 7px;
+		transition: all 0.5s;
+		&:hover{
+			background-color: green;
+		}
+	}
+	&____price{
+	}
+}
+
